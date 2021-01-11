@@ -1,0 +1,11 @@
+<div class='loginContainer'>
+  User Name:<br>
+  <input type="text" name="userName" #userName>
+  <br>
+  Password:<br>
+  <input type=" text" name="Password" #password>
+  <br><br>
+  <input type="submit" (click)='checkPwValidation(userName.value, password.value )' value='Sign in '>
+
+  <span *ngIf="error">{{error}}</span>
+</div>

@@ -1,0 +1,9 @@
+<p>
+  <button class='quit' (click)='quitChat()'>Quit</button>
+  <button class='enterLobby' (click)='newUserConnectToChat()'>Enter lobby</button>
+</p>
+
+<div class=title>Users</div>
+<div *ngIf="usersList">
+  <button *ngFor="let item of usersList" (click)=openPrivateChannel($event.target.innerText)>{{item}}</button>
+</div>

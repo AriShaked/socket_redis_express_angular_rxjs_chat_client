@@ -1,0 +1,15 @@
+<div class="container">
+  <div id='my-chat'>
+    <button id='back' (click)='leaveConversation()'>x</button>
+    <span class='saveAndFinish'>
+      <-click to save & finish conversation</span> <div id='chat-window'>
+        <div id='output' *ngFor="let item of messageHistoryArr">
+          <span><strong>--> </strong>{{item}}</span>
+        </div>
+        <div id='feedback'></div>
+  </div>
+  <input id='message' #message type='text' placeholder="Insert Your Message Here" />
+  <button id='send' (click)='sendMessage(message.value)'>Send</button>
+
+
+</div>
